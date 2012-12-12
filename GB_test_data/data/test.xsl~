@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:espi="http://naesb.org/espi" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<xsl:variable name="XML" select="/"/>
+	<xsl:template match="/">
+		<html>
+			<head>
+			</head>
+			<body>
+			<xsl:for-each select="atom:feed">
+											<xsl:for-each select="atom:entry">
+												<xsl:for-each select="atom:content">
+	<xsl:for-each select="espi:IntervalBlock">
+												<xsl:for-each select="espi:IntervalReading">
+												
+		<script type="text/javascript">document.write("<xsl:for-each select="espi:value"> <xsl:apply-templates/> </xsl:for-each> "+" " +"<xsl:for-each select="espi:cost"> <xsl:value-of select="format-number( . div(100000),&quot;0.00&quot;)"/></xsl:for-each>"+"\n\r\n\r\t");</script>
+		
+		</xsl:for-each>
+		</xsl:for-each>
+		</xsl:for-each>
+				</xsl:for-each>
+								</xsl:for-each>
+						</body>
+		</html>
+	</xsl:template>	
+</xsl:stylesheet>

@@ -1,0 +1,22 @@
+<script>function date(d)
+{
+/*  la=d+68569;
+  n=Math.floor((4*la)/146097);
+  lb=la-Math.floor((146097*n+3)/4)
+  i=Math.floor((4000*(lb+1))/1461001)
+  lc=lb-Math.floor((1461*i)/4)+31;
+  j=Math.floor((80*lc)/2447)
+  day=lc-Math.floor((2447*j)/80)
+  ld=Math.floor(j/11)
+  month=j+2-(12*ld)
+  year=100*(n-49)+i+ld;
+  return day+" "+month+" "+year;
+*/
+la=Math.floor(d/(86400*1461))*4;
+extra=n-la*1461*86400;
+
+
+
+}
+document.write("hi"+" "+date(1314835200));
+</script>

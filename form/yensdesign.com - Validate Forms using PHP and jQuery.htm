@@ -1,0 +1,35 @@
+
+	<link rel="stylesheet" href="./formFiles/general.css" type="text/css" media="screen">
+
+	<div id="container">
+		<h1>Registration process</h1>
+		
+		
+		<form method="post" id="customForm" action="user/register/index.php" name="register">
+			<div>
+				<label for="name">Name</label>
+				<input id="name" name="name" type="text" autocomplete="off" goog_input_chext="chext" class="error">
+				<span id="nameInfo" class="error">Atleast 3 letters!</span>
+			</div>
+			<div>
+				<label for="email">E-mail</label>
+				<input id="email" name="email" type="text" autocomplete="off" goog_input_chext="chext" class="">
+				<span id="emailInfo" class="">Valid E-mail please, you will need it to log in!</span>
+			</div>
+			<div>
+				<label for="pass1">Password</label>
+				<input id="pass1" name="password" type="password" class="error">
+				<span id="pass1Info" class="error">Ey! Remember: At least 5 characters</span>
+			</div>
+			<div>
+				<label for="pass2">Confirm Password</label>
+				<input id="pass2" name="repassword" type="password" class="">
+				<span id="pass2Info" class="">Confirm password</span>
+			</div>
+			<div>
+				<input id="send" name="send" type="submit" value="Register">
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="./formFiles/jquery.js"></script>
+	<script type="text/javascript" src="./formFiles/validation.js"></script>
